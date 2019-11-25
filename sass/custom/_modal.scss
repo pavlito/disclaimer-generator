@@ -1,0 +1,36 @@
+.modal-header {
+    .close {
+        right: $modal-inner-padding;
+        top: $modal-inner-padding;
+    }
+}
+
+.modal {
+	&#live-preview {
+		.modal-content {
+			background:rgba($dark,0.8);
+		}
+
+		.top {
+			background: $primary;
+			padding:$card-spacer-y $card-spacer-x;
+		    vertical-align: middle;
+		    display: flex;
+		    align-items: center;
+		}
+		.dot {
+			display: inline-block;
+			border-radius:100%;
+			background: $white;
+			width:$spacer * 1.4;
+			height: $spacer * 1.4;
+			margin-right: 1rem;
+			&:nth-child(2) {
+				opacity:0.8;
+			}
+			&:nth-child(3) {
+				opacity:0.5;
+			}
+		}
+	}
+}

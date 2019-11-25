@@ -1,0 +1,88 @@
+#toc_container {
+    padding: $card-spacer-x;
+    border: $card-border-width solid $card-border-color;
+    margin-bottom: $card-spacer-x * 2;
+    margin:map-get($spacers, 5) 0;
+    border-radius: $card-border-radius;
+    font-weight: $font-weight-bold;
+    @include box-shadow($box-shadow-sm);
+    ul {
+        padding: 0 $spacer;
+        list-style: none;
+       
+       ul {
+            margin-top:$spacer * 0.5;
+            
+        }
+    }
+
+    li {
+        margin-bottom: $spacer * 0.5;
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .space_h3 {
+        padding-left: $spacer * 1.4;
+    }
+
+    .space_h4 {
+        padding-left: $spacer * 3 * 1.2;
+    }
+     .space_h5 {
+        padding-left: $spacer * 5 * 1.2;
+    }
+}
+
+.toc_title_toggler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0.7;
+}
+
+.toc_title {
+    font-size: $h5-font-size;
+    font-weight: bold;
+    color: $dark;
+    text-decoration: none;
+}
+
+.toc_toggler {
+    display: flex;
+    // visibility: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    font-size: $h3-font-size;
+
+}
+
+.collapsible {
+    .toc_list_container {
+        display: none;
+        opacity: 0;
+        height: 0;
+
+        @include transition($transition-base);
+
+        &.expanded {
+            margin-top: $card-spacer-y;
+            display: block;
+            height: auto;
+            opacity: 1;
+
+            @include transition($transition-base);
+        }
+
+        .toc_list {
+            margin-top: $spacer * 2;
+        }
+    }
+}
+
+.toc_list_container .toc_list {
+    margin: 0;
+}

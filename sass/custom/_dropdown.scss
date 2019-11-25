@@ -1,0 +1,88 @@
+.dropdown-item {
+    font-weight: $font-weight-bold;
+}
+
+.floating-menu {
+    & + .dropdown-menu {
+        // transform: translate3d(5px, 35px, 0px)!important;
+        position: fixed;
+        top: auto;
+        bottom: $float-btn-top-position-bottom * 2.5;
+        right: $float-btn-top-position-right;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .navbar {
+        .dropdown-item {
+            padding: $dropdown-item-padding-y-sm $dropdown-item-padding-x-sm;
+
+            &:hover {
+                background: transparent;
+                outline: 0;
+            }
+        }
+
+        .dropdown {
+            &:after {
+                position: absolute;
+                display: block;
+                top: 10px;
+                left: 5px;
+                width: 2px;
+                height: 12px;
+                content: "";
+                border: none;
+                background-color: $navbar-light-color;
+                vertical-align: 0;
+                transition: all 200ms linear;
+            }
+
+            &:before {
+                position: absolute;
+                display: block;
+                top: 15px;
+                left: 0px;
+                width: 12px;
+                height: 2px;
+                content: "";
+                border: none;
+                background-color: $navbar-light-color;
+                vertical-align: 0;
+            }
+
+            &.show {
+                padding-bottom: $dropdown-item-padding-x;
+
+                &:after {
+                    transform: rotate(90deg);
+                    opacity: 0;
+                }
+
+                &:before {
+                    background-color: $primary;
+                }
+            }
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-menu {
+            border-width: 0;
+            box-shadow: none;
+            font-size: $medium-font-size;
+        }
+    }
+}
+
+
+@include media-breakpoint-down(340px) {
+    .floating-menu {
+        & + .dropdown-menu {
+          
+            right: $float-btn-top-position-right / 4;
+        }
+    }
+}

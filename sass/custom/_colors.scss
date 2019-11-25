@@ -1,0 +1,149 @@
+// Color system
+
+$white:    #fff;
+$gray-100: #F4F7FD;
+$gray-200: #e9ecef;
+$gray-300: #E1E0E3;
+$gray-400: #ced4da;
+$gray-500: #B5ADC7;
+$gray-600: #8779A4;
+$gray-700: #495057;
+$gray-800: #49396A; // text color
+$gray-900: #221341; // heading color
+$black:    #000;
+
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variabl
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:            #3D7AF4;
+$indigo:          #6610f2;
+$purple:          #6f42c1;
+$pink:            #e83e8c;
+$brand-pink-dark: #cf346f;
+$red:             #F43D3D;
+$orange:          #F48C3D;
+$orange-dark:     #E7952F;
+$yellow:          #F4D63D;
+$green:           #2BA822;
+$teal:            #20c997;
+$cyan:            #17a2b8;
+$footer-bg:       #FAFBFD;
+
+// Brand colors
+
+$brand-violet:    #553DF4;
+$brand-magenta:   #D9025F;
+$brand-purple:    #9F3DF4;
+$brand-pink:      #F43D7A;
+$brand-pink-dark: #cf346f;
+$brand-red:       #F4463D;
+$brand-orange:    #F4A53D;
+$brand-blue:      #008DCF;
+$brand-green:     #36B30C;
+$brand-turquoise: #02B884;
+
+$facebook:      #4267B2;
+$youtube:       #FF0000;
+$vimeo:         #1AB7EA;
+$twitter:       #50ABF1;
+
+
+// 3d party brands
+
+
+
+$colors: ();
+// stylelint-disable-next-line scss/dollar-variabl
+$colors: map-merge(
+  (
+    "blue":                 $blue,
+    "indigo":               $indigo,
+    "purple":               $purple,
+    "pink":                 $pink,
+    "red":                  $red,
+    "orange":               $orange,
+    "yellow":               $yellow,
+    "green":                $green,
+    "teal":                 $teal,
+    "cyan":                 $cyan,
+    "white":                $white,
+    "gray-light":           $gray-400,
+    "gray":                 $gray-600,
+    "gray-dark":            $gray-800,
+    "brand-violet":         $brand-violet,
+    "brand-magenta":        $brand-magenta,
+    "brand-purple":         $brand-purple,
+    "brand-pink":           $brand-pink,
+    "brand-pink-dark":      $brand-pink-dark,
+    "brand-red":            $brand-red,
+    "brand-orange":         $brand-orange,
+    "brand-orange-dark":    $orange-dark,
+    "brand-blue":           $brand-blue,
+    "brand-green":          $brand-green,
+    "brand-turquoise":      $brand-turquoise
+  ),
+  $colors
+);
+
+$primary:       $brand-violet;
+$secondary:     $brand-magenta;
+$success:       $green;
+$info:          $blue;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+$headline:      $gray-900;
+$text-muted:    $gray-500;
+
+
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variabl
+$theme-colors: map-merge(
+  (
+    "primary":              $primary,
+    "secondary":            $secondary,
+    "success":              $success,
+    "info":                 $info,
+    "warning":              $warning,
+    "danger":               $danger,
+    "light":                $light,
+    "gray-light":           $gray-500,
+    "gray":                 $gray-600,
+    "dark":                 $dark,
+    "headline":             $headline,
+    "white":                $white,
+    "brand-violet":         $brand-violet,
+    "brand-magenta":        $brand-magenta,
+    "brand-purple":         $brand-purple,
+    "brand-pink":           $brand-pink,
+    "brand-pink-dark":      $brand-pink-dark,
+    "brand-red":            $brand-red,
+    "brand-orange":         $brand-orange,
+    "brand-orange-dark":    $orange-dark,
+    "brand-blue":           $brand-blue,
+    "brand-green":          $brand-green,
+    "brand-turquoise":      $brand-turquoise,
+    'facebook':             $facebook,
+    'youtube':              $youtube,
+    'vimeo':                $vimeo ,
+    'twitter':              $twitter
+  ),
+  $theme-colors
+);
+

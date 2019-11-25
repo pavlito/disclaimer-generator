@@ -1,0 +1,322 @@
+// =============================================
+// Product Icons
+// =============================================
+
+.product-icon {
+    background-image: url("../assets/product-icon-sprite.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    border-radius: 100%;
+    zoom: $product-icon-zoom;
+    -moz-transform: scale($product-icon-zoom);
+
+    @-moz-document url-prefix() {
+        // margin:-90px 0;
+        margin: (-$product-icon-firefox-margin);
+    }
+
+    // -moz-transform-origin: top center;
+}
+
+.product-icon-sm {
+    zoom: $product-icon-sm;
+    -moz-transform: scale($product-icon-sm);
+
+    @-moz-document url-prefix() {
+        margin: -114px !important;
+        margin-right: $product-icon-firefox-margin-right-sm !important;
+    }
+}
+
+.product-consent {
+    width: 261px;
+    height: 263px;
+    background-position: -20px -20px;
+}
+
+.product-cookie {
+    width: 261px;
+    height: 263px;
+    background-position: -321px -20px;
+}
+
+.product-disclaimer {
+    width: 261px;
+    height: 263px;
+    background-position: -622px -20px;
+}
+
+.product-eula {
+    width: 261px;
+    height: 263px;
+    background-position: -923px -20px;
+}
+
+.product-privacy {
+    width: 262px;
+    height: 263px;
+    background-position: -1224px -20px;
+}
+
+.product-return {
+    width: 261px;
+    height: 263px;
+    background-position: -1526px -20px;
+}
+
+.product-terms {
+    width: 261px;
+    height: 263px;
+    background-position: -1827px -20px;
+}
+
+// =============================================
+// Brand Icons
+// =============================================
+
+.brand-icon {
+    background-image: url("../assets/brand-icon-sprite.png");
+    width: 160px;
+    height: 160px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.brand-eu {
+    background-position: -20px -0px;
+    zoom: 0.7;
+}
+
+.brand-google-play {
+    background-position: -200px -0px;
+    zoom: 0.5;
+}
+
+.brand-store {
+    background-position: -380px -0px;
+    zoom: 0.5;
+}
+
+.brand-usa {
+    background-position: -560px -0px;
+}
+
+.brand-adsense {
+    background-position: -740px -0px;
+    zoom: 0.5;
+}
+
+.brand-adwords {
+    background-position: -920px -0px;
+    zoom: 0.5;
+}
+
+.brand-analytics {
+    background-position: -1100px -0px;
+    zoom: 0.5;
+}
+
+.brand-apple {
+    background-position: -1280px -0px;
+}
+
+.brand-australia {
+    background-position: -1460px -0px;
+    zoom: 0.7;
+}
+
+.brand-california {
+    background-position: -1640px -0px;
+    zoom: 0.7;
+}
+
+.brand-commission {
+    background-position: -1820px -0px;
+    zoom: 0.7;
+}
+
+.brand-eprivacy {
+    background-position: -2000px -0px;
+}
+
+.landing-cookie {
+    .brand-eprivacy {
+        zoom: 0.7;
+    }
+}
+
+// =============================================
+// System Icons
+// =============================================
+
+@font-face {
+    font-family: "#{$icomoon-font-family}";
+    src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot");
+    src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?#iefix") format("embedded-opentype"), url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf") format("truetype"), url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff") format("woff"), url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?##{$icomoon-font-family}") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "#{$icomoon-font-family}" !important;
+
+    // speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-help {
+  &:before {
+    content: $icon-help; 
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down; 
+  }
+}
+.icon-double-arrow-down {
+  &:before {
+    content: $icon-double-arrow-down; 
+  }
+}
+.icon-vimeo {
+  &:before {
+    content: $icon-vimeo; 
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close; 
+  }
+}
+.icon-desktop {
+  &:before {
+    content: $icon-desktop; 
+  }
+}
+.icon-document {
+  &:before {
+    content: $icon-document; 
+  }
+}
+.icon-dollar {
+  &:before {
+    content: $icon-dollar; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-magic-wand {
+  &:before {
+    content: $icon-magic-wand; 
+  }
+}
+.icon-padlock {
+  &:before {
+    content: $icon-padlock; 
+  }
+}
+.icon-quote {
+  &:before {
+    content: $icon-quote; 
+  }
+}
+.icon-star {
+  &:before {
+    content: $icon-star; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-user {
+  &:before {
+    content: $icon-user; 
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube; 
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left; 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right; 
+  }
+}
+.icon-checkmark {
+  &:before {
+    content: $icon-checkmark; 
+  }
+}
+.icon-checkmark-bold {
+  &:before {
+    content: $icon-checkmark-bold; 
+  }
+}
+.icon-click {
+  &:before {
+    content: $icon-click; 
+  }
+}
+
+.icon-circle {
+    display: block;
+    width: 4.375rem;
+    height: 4.375rem;
+    margin: 0 auto;
+    font-size: $h1-font-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons {
+    font-size: 1.5rem;
+}
+
+.card {
+    &.blog-post,
+    &.related-post {
+        i {
+            font-size: $h3-font-size;
+        }
+    }
+}
+
+.selectable {
+    svg {
+        width:$selectable-icon-width;
+        height:$selectable-icon-height;
+        fill:$selectable-icon-color;
+
+    
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .product-icon-sm {
+        zoom: $product-icon-zoom-sm;
+    }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+</head>
+
+<body class="landing-consent"  data-spy="scroll" data-target=".step-indicator" data-offset="200">
+    @@include("partials/header.html", {"mode": "transparent"})
+    <section class="sect-hero sect-landing-hero bg-brand-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7 order-1 order-lg-0 text-center text-lg-left z-index-1">
+                    <h1 class="display-4 hero-title text-white">Cookie Consent</h1>
+                    <p class="h4 mt-3 hero-subtitle font-weight-normal text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <img src="/assets/illustrations/landing-consent/icon-gdpr-circle.svg" alt="">
+                        <span class="text-white h5 ml-1">ePrivacy Directive</span>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <img src="/assets/illustrations/landing-consent/icon-eprivacy-circle.svg" alt="">
+                        <span class="text-white h5 ml-1">General Data Protection Regulation (GDPR)</span>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-5">
+                    <div class="landing-illlustrations">
+                        <img src="./assets/illustrations/landing-consent/icon.svg" class="img-landing-icon" alt="">
+                        <img src="./assets/illustrations/landing-consent/hill.svg" class="img-landing-hill" alt="">
+                        <img src="./assets/illustrations/landing-consent/stain.svg" class="img-landing-stain" alt="">
+                    </div>
+                </div>
+                <img src="./assets/illustrations/landing-consent/hills.svg" class="img-landing-hills" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="sect-consent-builder">
+        @@include("partials/builder-svg-sprite.html")
+        @@include("partials/builder.html")
+    </section>
+    @@include('partials/footer.html', {"mode" : "no-slider"})
+    @@include("partials/live-preview-modal.html")
+    @@include('partials/script.html')
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+.bg-element {
+    position: absolute;
+}
+
+section {
+    padding: $section-padding-y 0;
+}
+
+.sect-hero {
+    position: relative;
+    overflow: hidden;
+
+    .bg-element {
+        z-index: 0;
+
+        &.element-1 {
+            top: 10%;
+            left: -8%;
+            width: 25%;
+        }
+
+        &.element-2 {
+            top: 24%;
+            right: -43%;
+            width: 67%;
+        }
+
+        &.element-3 {
+            top: 69%;
+            right: 79%;
+            width: 17%;
+        }
+
+        &.element-4 {
+            top: 6%;
+            right: 24%;
+            width: 12%;
+        }
+    }
+}
+
+.sect-create-privacypolicy {
+    position: relative;
+    overflow: hidden;
+
+    .bg-element {
+        &.element-1 {
+            top: 7%;
+            left: 15%;
+            width: 10%;
+        }
+
+        &.element-2 {
+            top: 79%;
+            right: 44%;
+            width: 7%;
+            transform: rotate(270deg);
+        }
+
+        &.element-3 {
+            top: 52%;
+            right: 82%;
+            width: 17%;
+        }
+
+        &.element-4 {
+            top: -6%;
+            left: 67%;
+            width: 34%;
+            transform: rotate(275deg);
+        }
+    }
+}
+
+.sect-user-reviews {
+    overflow: hidden;
+    position: relative;
+
+    .bg-element {
+        &.element-1 {
+            top: -8%;
+            left: -5%;
+            width: 17%;
+        }
+
+        &.element-2 {
+            top: 9%;
+            right: -7%;
+            width: 26%;
+            transform: rotate(245deg);
+        }
+
+        &.element-3 {
+            top: -48px;
+            right: 45%;
+            width: 8%;
+            transform: rotate(165deg);
+        }
+    }
+}
+
+.sect-hero-blog {
+    padding-bottom: $section-padding-y * 2.6;
+}
+
+.sect-hero-blog {
+    background: url("../assets/illustrations/illustration-blog.svg") no-repeat center (top / cover);
+}
+
+.sect-user-reviews {}
+
+.many-more {
+    background: url("../assets/brand-many-more.png") no-repeat center (top / cover);
+}
+
+.sect-breadcrumbs {
+    padding: ($spacer / 2) 0;
+}
+
+.sect-landing-hero {
+    position: relative;
+    padding-bottom: $section-padding-y / 3;
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+    .sect-consent-builder {
+        .demo_zone_pick {
+            max-width: 66.66667%;
+            flex-basis: 66.66667%;
+        }
+    }
+}
+
+
+@include media-breakpoint-down(lg) {
+    .landing-eula {
+        .sect-landing-hero {
+            padding-bottom: $section-padding-y;
+        }
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+    .sect-landing-hero {
+        padding-top: $section-padding-y / 2;
+        padding-bottom: $section-padding-y;
+    }
+
+    .landing-illlustrations {
+        z-index: 0;
+        position: absolute;
+    }
+}

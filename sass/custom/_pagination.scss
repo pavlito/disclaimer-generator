@@ -1,0 +1,50 @@
+.page-link {
+    // padding:0;
+    min-width: 3.125rem;
+    min-height: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include transition($transition-base);
+}
+
+.page-item {
+	&:last-child,
+	  &:first-child{
+	  	.page-link {
+	  		min-width:7rem;
+	  	}
+	}
+    &:first-child {
+        .page-link {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+
+    &:last-child {
+        .page-link {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 30px;
+        }
+    }
+
+    &.active {
+        box-shadow: 0 0.3rem 0.5rem rgba($primary, 0.3);
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .page-item {
+        display: none;
+    &:last-child,
+      &:first-child{
+        display: block;
+        .page-link {
+           
+        }
+    }
+    
+}
+}   

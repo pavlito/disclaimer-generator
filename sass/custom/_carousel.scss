@@ -1,0 +1,28 @@
+.carousel-indicators {
+ 
+
+  li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: $carousel-indicator-width;
+    height: $carousel-indicator-height;
+    margin-right: $carousel-indicator-spacer;
+    margin-left: $carousel-indicator-spacer;
+    border-radius: 100%;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: $carousel-indicator-bg;
+    background-clip: padding-box;
+    // Use transparent borders to increase the hit area by 10px on top and bottom.
+    border-top: $carousel-indicator-hit-area-height solid transparent;
+    border-bottom: $carousel-indicator-hit-area-height solid transparent;
+    opacity: .5;
+    @include transition($carousel-indicator-transition);
+  }
+
+  .active {
+    opacity: 1;
+    background-color: $carousel-indicator-active-bg;
+    box-shadow:$box-shadow-primary-sm;
+  }
+}

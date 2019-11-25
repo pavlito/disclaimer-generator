@@ -1,0 +1,163 @@
+.builder-sidebar {
+    position: sticky;
+    top: $navbar-height + 20px;
+
+    img {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+.step-indicator {
+    .list-group-item {
+        border-radius: 0;
+    }
+}
+
+.steps {
+    width: 100%;
+    overflow: hidden;
+}
+
+.step-number {
+    line-height: 1;
+}
+
+.step-circle {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 100%;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.3rem;
+}
+
+.step-item {
+    background-color: transparent;
+    border-width: 0;
+    color: $white;
+
+    // opacity: 0.7;
+    display: flex;
+    align-items: center;
+
+    @include transition($transition-base);
+
+    i {
+        display: none;
+        color: $primary;
+        font-size: $h5-font-size;
+    }
+
+    &.active {
+        opacity: 1;
+        background-color: rgba($white, 15%);
+        color: $primary;
+
+        @include transition($transition-base);
+
+        &:hover {
+            color: $primary;
+        }
+
+        .step-circle {
+            background: transparent;
+        }
+
+        .step-number {
+            color: $primary;
+        }
+    }
+
+    &:hover {
+        color: $white;
+        opacity: 1;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .builder-sidebar {
+        position: static;
+        margin: 0 -15px;
+
+        .card {
+            border-radius: 0;
+        }
+    }
+
+    .builder-sidebar-wrap {
+        position: sticky;
+        z-index: $zindex-fixed;
+    }
+
+    .step-indicator {
+        justify-content: space-evenly;
+    }
+
+    .step-item {
+        font-size: $medium-font-size;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .step-number {
+        color: $primary;
+    }
+
+    .step-circle {
+        margin-right: 0;
+        background: $white;
+    }
+
+    .step-item {
+        display: flex;
+        align-items: center;
+
+        &.active {
+            background: rgba($white, 0.15);
+
+            .step-circle {
+                margin-right: 0.3rem;
+                background-color: $white;
+            }
+
+            .step-label {
+                display: block;
+                color: $white;
+            }
+        }
+    }
+
+    .step-label {
+        display: none;
+    }
+
+    .live_preview {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .steps {
+        position: static;
+        top: $navbar-height + 20px;
+    }
+}
+
+
+@include media-breakpoint-down(sm) {
+    .step-item {
+        &.active {
+            .step-label {
+                display: none;
+            }
+
+            .step-circle {
+                margin-right: 0;
+            }
+        }
+    }
+}

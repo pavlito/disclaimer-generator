@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+</head>
+
+<body class="landing-article">
+    @@include('partials/header-light.html')
+    <!-- breadcrumb -->
+    <section class="sect-breadcrumbs bg-light">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent m-0 text-uppercase">
+                    <li class="breadcrumb-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        A Privacy Policy For Squarespace Websites
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section><!-- end breadcrumb -->
+    <section class="sect-blog-content">
+        <div class="container">
+            <div class="row">
+                <!-- blog post content -->
+                <div class="col-lg-8">
+                    <!-- blog post image -->
+                    @@include('partials/post-content.html')
+                    <!-- categories blog tags -->
+                    <section class="sect-categories pb-0">
+                        <h5 class="mb-4">Categories</h5>
+                        <a href="#" class="btn btn-sm mt-2 mt-lg-0 bg-light text-gray">BUSINESS</a>
+                        <a href="#" class="btn btn-sm mt-2 mt-lg-0 bg-light text-gray">LEGAL</a>
+                        <a href="#" class="btn btn-sm mt-2 mt-lg-0 bg-light text-gray">AGREEMENT</a>
+                        <a href="#" class="btn btn-sm mt-2 mt-lg-0 bg-light text-gray">GDPR</a>
+                    </section>
+                </div>
+                <!-- sidebar widgets -->
+                @@include('partials/post-sidebar2.html')
+            </div>
+        </div>
+    </section>
+    <!-- related articles -->
+    <section class="sect-related-articles pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Related Articles</h3>
+                </div>
+            </div>
+            <div class="row">
+                @@include('partials/related-articles.html')
+            </div>
+        </div>
+    </section>
+    @@include('partials/footer.html')
+    @@include('partials/floating-product-menu.html')
+    @@include('partials/script.html')
+</body>
+
+</html>

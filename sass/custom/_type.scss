@@ -1,0 +1,67 @@
+.section-title {
+    margin-bottom: 0;
+}
+
+.section-subtitle {
+    font-size: $h5-font-size;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.hero-subtitle {
+    font-weight: normal;
+    color: $dark;
+}
+
+.hero-title {
+    margin-bottom: 0;
+}
+
+.p { @include font-size($font-size-base); }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    word-wrap: break-word;
+}
+
+.post-content {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        margin-top: map-get($spacers, 5);
+        margin-bottom: $spacer;
+    }
+
+    h1,
+    .h1 {
+        font-size: $display4-size;
+        margin-top: $spacer;
+    }
+}
+
+blockquote {
+    margin-bottom: $blockquote-padding;
+
+    @include font-size($blockquote-font-size);
+
+    padding: $blockquote-padding $blockquote-padding $blockquote-padding ($blockquote-padding * 2);
+    border-left: $blockquote-border-width solid $blockquote-border-color;
+}
+
+.sect-legal {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        margin-top: map-get($spacers, 5);
+
+        // margin-bottom: $spacer;
+   
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    // .hero-title,
+    // .section-title {
+    //     font-size: $h1-font-size;
+    // }
+
+    // .hero-subtitle {
+    //     font-size: $h4-font-size;
+    // }
+}
