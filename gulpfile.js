@@ -33,15 +33,15 @@ gulp.task('browser-sync', function() {
 
 gulp.task('clean-css', function() {
     return del([
-        "app/assets/css/bootstrap"
+        "app/assets/css/"
     ]);
 });
-//a
+
 
 gulp.task('sass', function() {
     // var src = gulp.src('./sass/**/*.scss');
     var src = gulp.src([
-        './sass/**/*.scss',
+        './sass/**/**/*.scss',
         '!./sass/bootstrap/*',
         ]);
     var dest = gulp.dest('app/assets/css');

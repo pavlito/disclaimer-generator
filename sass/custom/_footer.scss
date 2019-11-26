@@ -1,32 +1,9 @@
+
 footer {
-    background-color:$footer-bg;
+	width:100%;
+	background: $footer-bg;
+	margin-top:auto;
+	position:absolute;
+	bottom:0;
+
 }
-body {
-    background: red;
-}
-.nav-link {
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: $gray-800;
-
-    &:hover {
-        color: $gray-800;
-    }
-}
-
-
-.second-footer {
-    color: $gray-800;
-    font-weight: 600;
-
-    .nav-link {
-        font-weight: 600;
-    }
-    
-    .bottom-footer-text {
-        font-size: 0.8rem;
-        font-weight: 400;
-    }
-}
-
