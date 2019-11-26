@@ -6,7 +6,11 @@
 		<meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>Disclaimer Generator: Generate Your Disclaimer</title>
 		<meta name="description" content="World's Easiest Disclaimer Generator: Generate your Disclaimer in just 10 seconds" />
+		<?php
+		if ((isset($page)) && ($page == 'download')) echo '<meta name="robots" content="noindex" />' . "\r\n";
+		?>
 		<!-- favicon -->
+
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/images/apple-touch-icon-57x57.png" />
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114.png" />
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72.png" />

@@ -137,7 +137,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
-								<div class="card">
+								<div class="card mt-5 mt-lg-0">
 									<div class="card-body text-center">
 										<svg id="icon-pp-generator" xmlns="http://www.w3.org/2000/svg" width="60.006" height="59.995" viewBox="0 0 60.006 59.995">
 											<rect id="Rectangle_36" data-name="Rectangle 36" width="59.995" height="59.995" transform="translate(0.011)" fill="#6f0ee6" opacity="0"/>
@@ -174,7 +174,7 @@
 								</div>
 							</div>
 							<div class="col-lg-4">
-								<div class="card">
+								<div class="card mt-5 mt-lg-0">
 									<div class="card-body text-center">
 										<svg id="icon-tc-generator" xmlns="http://www.w3.org/2000/svg" width="59.995" height="60" viewBox="0 0 59.995 60">
 											<rect id="Rectangle_35" data-name="Rectangle 35" width="59.995" height="59.995" fill="#6f0ee6" opacity="0"/>
@@ -198,7 +198,7 @@
 								</div>
 							</div>
 							<div class="col-lg-4">
-								<div class="card">
+								<div class="card mt-5 mt-lg-0">
 									<div class="card-body text-center">
 										<svg id="icon-d-generator" xmlns="http://www.w3.org/2000/svg" width="59.995" height="59.995" viewBox="0 0 59.995 59.995">
 											<rect id="Rectangle_34" data-name="Rectangle 34" width="59.995" height="59.995" fill="#6f0ee6" opacity="0"/>
