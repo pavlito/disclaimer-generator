@@ -3,10 +3,45 @@
     z-index: 2;
 }
 
+#wlg_back {
+    @include button-variant($white, transparent);
+    flex-grow: 1;
+    &:hover,
+    &:focus,
+    &:active {
+        background: transparent;
+        border-color:transparent;
+    }
+
+    &:disabled {
+        display: none;
+    }
+}
+
+#wlg_next {
+    @include button-variant($primary, $primary);
+    flex-grow:2;
+    &:disabled {
+        display: none;
+    }
+}
+
+#wlg_submit {
+    flex-grow:2;
+}
+
 .wizard {
     background: $white;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
+
+    .btn {
+        &.btn-default {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
     .no-script {
         padding: 20px;
         font-weight: $font-weight-bold;
@@ -25,7 +60,6 @@
             display: flex;
             flex: 1 0 0;
             justify-content: space-between;
-
             margin: 0;
 
             li {
@@ -46,8 +80,6 @@
         h3 {
             font-size: $font-size-base;
             color: $body-color;
-
-       
         }
 
         .form-group {
@@ -56,6 +88,12 @@
 
         .wlg-form-group {
             margin-top: $spacer * 2;
+        }
+
+        & .active {
+            .wlg-form-group:first-child {
+                margin-top: 0;
+            }
         }
 
         .lcghl-form-control-radio {
@@ -181,9 +219,8 @@
     .wizard-steps-navigation {
         display: flex;
         padding: $card-spacer-y $card-spacer-x;
-
+        justify-content: space-around;
         button {
-            width: 100%;
 
             &#lcghl_next, &#lcghl_submit {
                 background: $primary;

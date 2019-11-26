@@ -2800,6 +2800,41 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
+.fade {
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.fade:not(.show) {
+  opacity: 0;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
 .dropup,
 .dropright,
 .dropdown,
@@ -8192,11 +8227,113 @@ a {
   z-index: 2;
 }
 
+#wlg_back {
+  color: #27084D;
+  background-color: #fff;
+  border-color: transparent;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#wlg_back:hover {
+  color: #27084D;
+  background-color: #ececec;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+#wlg_back:focus, #wlg_back.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(39, 8, 77, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(39, 8, 77, 0.5);
+}
+
+#wlg_back.disabled, #wlg_back:disabled {
+  color: #27084D;
+  background-color: #fff;
+  border-color: transparent;
+}
+
+#wlg_back:not(:disabled):not(.disabled):active, #wlg_back:not(:disabled):not(.disabled).active,
+.show > #wlg_back.dropdown-toggle {
+  color: #27084D;
+  background-color: #e6e6e6;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+#wlg_back:not(:disabled):not(.disabled):active:focus, #wlg_back:not(:disabled):not(.disabled).active:focus,
+.show > #wlg_back.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(39, 8, 77, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(39, 8, 77, 0.5);
+}
+
+#wlg_back:hover, #wlg_back:focus, #wlg_back:active {
+  background: transparent;
+  border-color: transparent;
+}
+
+#wlg_back:disabled {
+  display: none;
+}
+
+#wlg_next {
+  color: #fff;
+  background-color: #6F0EE6;
+  border-color: #6F0EE6;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+#wlg_next:hover {
+  color: #fff;
+  background-color: #5e0cc2;
+  border-color: #580bb6;
+}
+
+#wlg_next:focus, #wlg_next.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(133, 50, 234, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(133, 50, 234, 0.5);
+}
+
+#wlg_next.disabled, #wlg_next:disabled {
+  color: #fff;
+  background-color: #6F0EE6;
+  border-color: #6F0EE6;
+}
+
+#wlg_next:not(:disabled):not(.disabled):active, #wlg_next:not(:disabled):not(.disabled).active,
+.show > #wlg_next.dropdown-toggle {
+  color: #fff;
+  background-color: #580bb6;
+  border-color: #520aaa;
+}
+
+#wlg_next:not(:disabled):not(.disabled):active:focus, #wlg_next:not(:disabled):not(.disabled).active:focus,
+.show > #wlg_next.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(133, 50, 234, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(133, 50, 234, 0.5);
+}
+
+#wlg_next:disabled {
+  display: none;
+}
+
+#wlg_submit {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
 .wizard {
   background: #fff;
   border-radius: 0.375rem;
   -webkit-box-shadow: 0 0.3125rem 2.5rem rgba(111, 14, 230, 0.15);
           box-shadow: 0 0.3125rem 2.5rem rgba(111, 14, 230, 0.15);
+}
+
+.wizard .btn.btn-default {
+  background-color: #6F0EE6;
+  color: #fff;
 }
 
 .wizard .no-script {
@@ -8252,6 +8389,10 @@ a {
 
 .wizard .wizard-steps-body .wlg-form-group {
   margin-top: 2rem;
+}
+
+.wizard .wizard-steps-body .active .wlg-form-group:first-child {
+  margin-top: 0;
 }
 
 .wizard .wizard-steps-body .lcghl-form-control-radio {
@@ -8372,10 +8513,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   padding: 0.75rem 1.25rem;
-}
-
-.wizard .wizard-steps-navigation button {
-  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .wizard .wizard-steps-navigation button#lcghl_next, .wizard .wizard-steps-navigation button#lcghl_submit {
@@ -8613,6 +8752,12 @@ footer {
     -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
             transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
+}
+
+.notifyjs-bootstrap-branded {
+  background: #ebddfd !important;
+  border-color: #6F0EE6 !important;
+  color: #290556 !important;
 }
 
 /*# sourceMappingURL=main.css.map */
