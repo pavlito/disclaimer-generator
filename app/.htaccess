@@ -1,0 +1,4 @@
+Options +MultiViews
+DirectorySlash On
+
+DirectoryIndex index.php

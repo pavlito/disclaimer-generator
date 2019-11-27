@@ -1,5 +1,3 @@
-<script src="/assets/js/jquery.slim.min.js" type="text/javascript"></script>
-<script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
 <footer>
 	<div class="container">
 		<div class="row">

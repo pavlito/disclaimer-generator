@@ -7,7 +7,6 @@ require __DIR__ . '/phpdotenv/Validator.php';
 
 $dotenv = new Dotenv\Dotenv(__DIR__);
 
-
 $dotenv->load();
 
 $dotenv->required(array(

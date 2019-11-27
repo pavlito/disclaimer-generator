@@ -21,19 +21,23 @@ gulp.task('log', function() {
 gulp.task('browser-sync', function() {
     php.server({
         base: 'c:/t4web/disclaimer/app',
+        index: "index.php",
         port: 8010,
         keepalive: true
     }, function() {
         browserSync.init({
             injectChanges: true,
-            proxy: '127.0.0.1:8010'
+            proxy: '127.0.0.1:8010',
+            startPath: "/index.php"
         });
     });
 });
 
 gulp.task('clean-css', function() {
     return del([
-        "app/assets/css/"
+        "app/assets/css/style.css",
+        "app/assets/css/style.min.css",
+        "app/assets/css/style.css.map"
     ]);
 });
 
