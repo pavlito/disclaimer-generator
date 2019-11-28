@@ -79,6 +79,38 @@ gulp.task('watch', gulp.series('sass',
 
 gulp.task('default', gulp.series('clean-css', gulp.parallel('watch', 'browser-sync')));
 
+// Build
+
+gulp.task('copy-sass', function() {
+    return gulp.src([
+            'sass/**/**'
+        ])
+        .pipe(gulp.dest('app/sass/'));
+});
+
+gulp.task('clean-sass', function() {
+    return del([
+        "app/sass"
+    ]);
+});
+
+gulp.task('copy-php', function() {
+    return gulp.src('app/**')
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('clean-dist', function() {
+    return del([
+        "app/sass"
+    ]);
+});
+
+gulp.task("build", gulp.series(
+    ['clean-sass', 'clean-dist'],
+    gulp.parallel('copy-sass'),
+    'copy-php'
+));
+
 
 
 // gulp.task('clean-libs', function() {
