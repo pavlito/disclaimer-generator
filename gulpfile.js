@@ -37,7 +37,9 @@ gulp.task('clean-css', function() {
     return del([
         "app/assets/css/style.css",
         "app/assets/css/style.min.css",
-        "app/assets/css/style.css.map"
+        "app/assets/css/style.css.map",
+        "app/assets/css/main.css",
+        "app/assets/css/main.css.map"
     ]);
 });
 
@@ -81,6 +83,22 @@ gulp.task('default', gulp.series('clean-css', gulp.parallel('watch', 'browser-sy
 
 // Build
 
+gulp.task('sass-build', function() {
+    // var src = gulp.src('./sass/**/*.scss');
+    var src = gulp.src([
+        './sass/**/**/*.scss',
+        '!./sass/bootstrap/*',
+        ]);
+    var dest = gulp.dest('app/assets/css');
+    return src
+        .pipe(sourcemaps.init())
+        .pipe(sass({ 'outputStyle': 'compressed', 'sync': true }).on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(sourcemaps.write('.'))
+        .pipe(dest)
+        .pipe(browserSync.stream());
+});
+
 gulp.task('copy-sass', function() {
     return gulp.src([
             'sass/**/**'
@@ -107,7 +125,7 @@ gulp.task('clean-dist', function() {
 
 gulp.task("build", gulp.series(
     ['clean-sass', 'clean-dist'],
-    gulp.parallel('copy-sass'),
+    gulp.parallel('copy-sass', 'sass-build'),
     'copy-php'
 ));
 
