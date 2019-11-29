@@ -1,14 +1,20 @@
-body,html, .wrapper {
+body, html, .wrapper {
     min-height: 100vh;
 }
+
 a {
-    // font-weight: $font-weight-bold;
-    color:$body-color;
+    color: $body-color;
 }
+
+.blog-container {
+    a {
+        color: $primary;
+    }
+}
+
 .wrapper {
     position: relative;
-    padding-bottom:2rem;
-
+    padding-bottom: 2rem;
 }
 
 .sect-about {
