@@ -20,7 +20,7 @@ gulp.task('log', function() {
 
 gulp.task('browser-sync', function() {
     php.server({
-        base: 'c:/t4web/disclaimer/app',
+         base: 'app/',
         index: "index.php",
         port: 8010,
         keepalive: true
@@ -101,7 +101,7 @@ gulp.task('sass-build', function() {
 
 gulp.task('copy-sass', function() {
     return gulp.src([
-            'sass/**/**'
+            './sass/**/**'
         ])
         .pipe(gulp.dest('app/sass/'));
 });
